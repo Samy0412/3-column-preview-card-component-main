@@ -1,0 +1,101 @@
+:root {
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  --Transparent-white: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--Very-light-gray);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 2.5rem;
+  color: var(--Very-light-gray);
+  font-family: "Big Shoulders Display", cursive;
+  margin-top: -3rem;
+}
+
+p {
+  color: var(--Transparent-white);
+  font-family: "Lexend Deca", sans-serif;
+  line-height: 1.5rem;
+  margin-top: -3.5rem;
+}
+
+button {
+  border: none;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 2rem;
+  font-family: "Lexend Deca", sans-serif;
+  margin-bottom: -1.5rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  width: 65vw;
+  min-height: 55vh;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.flex-item {
+  padding: 2rem 3.4rem;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.one {
+  background-color: var(--Bright-orange);
+}
+.one button {
+  color: var(--Bright-orange);
+}
+
+.two {
+  background-color: var(--Dark-cyan);
+}
+.two button {
+  color: var(--Dark-cyan);
+}
+
+.three {
+  background-color: var(--Very-dark-cyan);
+}
+.three button {
+  color: var(--Very-dark-cyan);
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 1160px) {
+  .flex-container {
+    flex-direction: column;
+    width: 85vw;
+    margin-top: 110vh;
+  }
+  .flex-item {
+    height: 65vh;
+  }
+}
